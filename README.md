@@ -43,4 +43,22 @@ var str = `Hello world!, ${first} ${last}.`
 ```
 There's more at [Mozilla/Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
+## Number Truncation
+Truncate a floating point number to its integral part, completely dropping the fractional part.
+```js
+// ES6
+console.log(Math.trunc(42.7)) // 42
+console.log(Math.trunc( 0.1)) // 0
+console.log(Math.trunc(-0.1)) // -0
+
+// ES5
+function mathTrunc (x) {
+    return (x < 0 ? Math.ceil(x) : Math.floor(x));
+}
+console.log(mathTrunc(42.7)) // 42
+console.log(mathTrunc( 0.1)) // 0
+console.log(mathTrunc(-0.1)) // -0
+```
+Credits: [es6-features](http://es6-features.org/#NumberTruncation)
+
 made with :heart: by [Steven](https://github.com/iamstevendao).
