@@ -61,4 +61,10 @@ console.log(mathTrunc(-0.1)) // -0
 ```
 Credits: [es6-features](http://es6-features.org/#NumberTruncation)
 
+## Shorthand syntax for Object Properties Initializer
+Available from ES6, more at [Mozilla/Object_initializer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+```js
+var obj = { x, y } // == { x: x, y: y }
+```
+
 made with :heart: by [Steven](https://github.com/iamstevendao).
