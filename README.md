@@ -2,9 +2,9 @@
 **Easy** and **short** syntax in Javascript which are **less common**, get updated whenever I see a new one.
 
 ## Table of Contents
-- [Use + to convert String to Number](#use-to-convert-string-to-number)
-- [Spread syntax (...)](#spread-syntax)
-- [Template literals (\` \`)](#template-literals)
+- [Use + to convert String to Number](#use--to-convert-string-to-number)
+- [Spread syntax (...)](#spread-syntax-)
+- [Template literals (\` \`)](#template-literals--)
 - [Number Truncation](#number-truncation)
 - [Short syntax for Object Properties Initializer](#short-syntax-for-object-properties-initializer)
 - [Short syntax for Method Definitions on Objects Initializers](#short-syntax-for-method-definitions-on-objects-initializers)
