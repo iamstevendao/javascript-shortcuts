@@ -9,7 +9,7 @@ Easy and short syntax in Javascript which are less common, get updated whenever 
 where I saw it: [learnyoumongo](https://github.com/evanlucas/learnyoumongo)
 
 ## Spread syntax (...)
-Super powerful one with a fully detailed explanation at [Mozilla/Spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+Super powerful one with a fully detailed explanation at [moz://a](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
 
 Examples:
 ```js
@@ -41,7 +41,7 @@ var str = 'Hello world!, ' + first + ' ' + last + '.'
 // now:
 var str = `Hello world!, ${first} ${last}.`
 ```
-There's more at [Mozilla/Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+There's more at [moz://a](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
 ## Number Truncation
 Truncate a floating point number to its integral part, completely dropping the fractional part.
@@ -62,9 +62,35 @@ console.log(mathTrunc(-0.1)) // -0
 Credits: [es6-features](http://es6-features.org/#NumberTruncation)
 
 ## Shorthand syntax for Object Properties Initializer
-Available from ES6, more at [Mozilla/Object_initializer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+Available from ES6, more at [moz://a](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
 ```js
 var obj = { x, y } // == { x: x, y: y }
 ```
 
-made with :heart: by [Steven](https://github.com/iamstevendao).
+## Short syntax for method definitions on objects initializers  
+It is a shorthand for a function assigned to the method's name, starts with ECMAScript 2015, read more at [moz://a](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)  
+Before:
+```js
+var obj = {
+  foo: function() {
+    /* code */
+  },
+  bar: function() {
+    /* code */
+  }
+};
+```
+In ECMAScript 2015:
+```js
+var obj = {
+  foo() {
+    /* code */
+  },
+  bar() {
+    /* code */
+  }
+};
+```
+I found it when doing the tutorial app of [Meteor](https://www.meteor.com/tutorials/blaze/creating-an-app)
+
+made with &#x2764; by [Steven](https://github.com/iamstevendao).
