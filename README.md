@@ -1,5 +1,13 @@
 # Javascript Shortcuts
-Easy and short syntax in Javascript which are less common, get updated whenever I see a new one.
+**Easy** and **short** syntax in Javascript which are **less common**, get updated whenever I see a new one.
+
+## Table of Contents
+- [Use + to convert String to Number](#use-to-convert-string-to-number)
+- [Spread syntax (...)](#spread-syntax)
+- [Template literals (\` \`)](#template-literals)
+- [Number Truncation](#number-truncation)
+- [Short syntax for Object Properties Initializer](#short-syntax-for-object-properties-initializer)
+- [Short syntax for Method Definitions on Objects Initializers](#short-syntax-for-method-definitions-on-objects-initializers)
 
 ## Use + to convert String to Number
 ```js
@@ -61,13 +69,13 @@ console.log(mathTrunc(-0.1)) // -0
 ```
 Credits: [es6-features](http://es6-features.org/#NumberTruncation)
 
-## Shorthand syntax for Object Properties Initializer
+## Short syntax for Object Properties Initializer
 Available from ES6, more at [moz://a](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
 ```js
 var obj = { x, y } // == { x: x, y: y }
 ```
 
-## Short syntax for method definitions on objects initializers  
+## Short syntax for Method Definitions on Objects Initializers  
 It is a shorthand for a function assigned to the method's name, starts with ECMAScript 2015, read more at [moz://a](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)  
 Before:
 ```js
