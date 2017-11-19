@@ -8,6 +8,7 @@
 - [Number Truncation](#number-truncation)
 - [Short syntax for Object Properties Initializer](#short-syntax-for-object-properties-initializer)
 - [Short syntax for Method Definitions on Objects Initializers](#short-syntax-for-method-definitions-on-objects-initializers)
+- [Self Executing Anonymous Functions](#self-executing-anonymous-functions)
 
 ## Use + to convert String to Number
 ```js
@@ -100,5 +101,22 @@ var obj = {
 };
 ```
 I found it when doing the tutorial app of [Meteor](https://www.meteor.com/tutorials/blaze/creating-an-app)
+
+## Self Executing Anonymous Functions
+This is not very strange one, since we see a lot in the JQuery, AngularJS files...
+```js
+// create an anonymous function and call it straight away
+(function(){
+  console.log('Hello World!');
+})();
+// => Hello World!
+
+// with parameters
+(function(a){
+  console.log(a === window); //Returns 'true'
+})(window);
+// pass 'window' as the parameter to call the anonymous function 
+```
+Check out [this blog](http://markdalgleish.com/2011/03/self-executing-anonymous-functions/) for more!
 
 made with &#x2764; by [Steven](https://github.com/iamstevendao).
