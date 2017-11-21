@@ -9,11 +9,12 @@
 - [Short syntax for Object Properties Initializer](#short-syntax-for-object-properties-initializer)
 - [Short syntax for Method Definitions on Objects Initializers](#short-syntax-for-method-definitions-on-objects-initializers)
 - [Self Executing Anonymous Functions](#self-executing-anonymous-functions)
+- [Use Array Destructuring to swap variables values](#use-array-destructuring-to-swap-variables-values)
 
 ## Use + to convert String to Number
 ```js
-+'3' === 3
-+'3' === Number(3)
++'3' === 3 // true
++'3' === Number(3) // true
 ```
 where I saw it: [learnyoumongo](https://github.com/evanlucas/learnyoumongo)
 
@@ -118,5 +119,18 @@ This is not very strange one, since we see a lot in the JQuery, AngularJS files.
 // pass 'window' as the parameter to call the anonymous function 
 ```
 Check out [this blog](http://markdalgleish.com/2011/03/self-executing-anonymous-functions/) for more!
+
+## Use Array Destructuring to swap variables values
+This shorthand is a part of [Destructuring Assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), released in ES6
+```js
+let a = 1;
+let b = 3;
+let c = 5;
+
+[a, b, c] = [b, c, a];
+console.log(a); // 3
+console.log(b); // 5
+console.log(c); // 1
+```
 
 made with &#x2764; by [Steven](https://github.com/iamstevendao).
