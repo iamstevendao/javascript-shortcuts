@@ -1,5 +1,5 @@
 # Javascript Shortcuts
-**Easy** and **short** syntax in Javascript which are **less common**, get updated whenever I see a new one.
+**Easy** and **short** syntaxes in Javascript which are **less common**, get updated whenever I see a new one.
 
 ## Table of Contents
 - [Use + to convert String to Number](#use--to-convert-string-to-number)
@@ -99,6 +99,6 @@ var obj = {
   }
 };
 ```
-I found it when doing the tutorial app of [Meteor](https://www.meteor.com/tutorials/blaze/creating-an-app)
+I found it while doing the tutorial app of [Meteor](https://www.meteor.com/tutorials/blaze/creating-an-app)
 
 made with &#x2764; by [Steven](https://github.com/iamstevendao).
