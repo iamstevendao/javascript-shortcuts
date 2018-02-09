@@ -132,5 +132,15 @@ console.log(a); // 3
 console.log(b); // 5
 console.log(c); // 1
 ```
+## Methods that sometimes I need
+```js
+export const camelCaseToLabel = function (camelCase) {
+  // Capitalize a sentence in camel case: 'helloWorld' => 'Hello world'
+  // Split words by the camel case
+  const word = camelCase.replace(/([A-Z])/g, match => ` ${match.toLowerCase()}`);
+  // Capitalize the first character
+  return word[0].toUpperCase() + word.slice(1);
+};
+```
 
 made with &#x2764; by [Steven](https://github.com/iamstevendao).
