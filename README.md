@@ -153,6 +153,99 @@ console.log(c); // 1
   // good
   const baz = Array.from(foo, bar);
   ```
+
+- [15.5](#comparison--switch-blocks) Use braces to create blocks in `case` and `default` clauses that contain lexical declarations (e.g. `let`, `const`, `function`, and `class`). eslint: [`no-case-declarations`](https://eslint.org/docs/rules/no-case-declarations.html)
+
+  > Why? Lexical declarations are visible in the entire `switch` block but only get initialized when assigned, which only happens when its `case` is reached. This causes problems when multiple `case` clauses attempt to define the same thing.
+
+  ```javascript
+  // bad
+  switch (foo) {
+    case 1:
+      let x = 1;
+      break;
+    case 2:
+      const y = 2;
+      break;
+    case 3:
+      function f() {
+        // ...
+      }
+      break;
+    default:
+      class C {}
+  }
+
+  // good
+  switch (foo) {
+    case 1: {
+      let x = 1;
+      break;
+    }
+    case 2: {
+      const y = 2;
+      break;
+    }
+    case 3: {
+      function f() {
+        // ...
+      }
+      break;
+    }
+    case 4:
+      bar();
+      break;
+    default: {
+      class C {}
+    }
+  }
+  ```
+- [18.4](#comments--actionitems) Prefixing your comments with `FIXME` or `TODO` helps other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `FIXME: -- need to figure this out` or `TODO: -- need to implement`.
+
+- [18.5](#comments--fixme) Use `// FIXME:` to annotate problems.
+
+  ```javascript
+  class Calculator extends Abacus {
+    constructor() {
+      super();
+
+      // FIXME: shouldn’t use a global here
+      total = 0;
+    }
+  }
+  ```
+
+- [18.6](#comments--todo) Use `// TODO:` to annotate solutions to problems.
+
+  ```javascript
+  class Calculator extends Abacus {
+    constructor() {
+      super();
+
+      // TODO: total should be configurable by an options param
+      this.total = 0;
+    }
+  }
+  ```
+  
+- [22.2](#coercion--strings)  Strings: eslint: [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
+
+  ```javascript
+  // => this.reviewScore = 9;
+
+  // bad
+  const totalScore = new String(this.reviewScore); // typeof totalScore is "object" not "string"
+
+  // bad
+  const totalScore = this.reviewScore + ''; // invokes this.reviewScore.valueOf()
+
+  // bad
+  const totalScore = this.reviewScore.toString(); // isn’t guaranteed to return a string
+
+  // good
+  const totalScore = String(this.reviewScore);
+  ```
+
 ## Useful methods
 ```js
 export const camelCaseToLabel = function (camelCase) {
