@@ -10,7 +10,7 @@
 - [Short syntax for Method Definitions on Objects Initializers](#short-syntax-for-method-definitions-on-objects-initializers)
 - [Self Executing Anonymous Functions](#self-executing-anonymous-functions)
 - [Use Array Destructuring to swap variables values](#use-array-destructuring-to-swap-variables-values)
-- [Bookmarked from airbnb]()
+- [Bookmarked from airbnb](#bookmarked-from-airbnb)
 
 ## Use + to convert String to Number
 ```js
