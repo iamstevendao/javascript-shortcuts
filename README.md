@@ -10,6 +10,7 @@
 - [Short syntax for Method Definitions on Objects Initializers](#short-syntax-for-method-definitions-on-objects-initializers)
 - [Self Executing Anonymous Functions](#self-executing-anonymous-functions)
 - [Use Array Destructuring to swap variables values](#use-array-destructuring-to-swap-variables-values)
+- [Bookmarked from airbnb]()
 
 ## Use + to convert String to Number
 ```js
@@ -132,7 +133,27 @@ console.log(a); // 3
 console.log(b); // 5
 console.log(c); // 1
 ```
-## Methods that sometimes I need
+## Bookmarked from airbnb
+- [3.8](#objects--rest-spread) Prefer the object spread operator over [`Object.assign`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) to shallow-copy objects. Use the object rest operator to get a new object with certain properties omitted.
+
+  ```js
+  // Use spread syntax to deep-copy, and to remove unwanted properties
+  const original = { a: 1, b: 2 };
+  const copy = { ...original, c: 3 }; // copy => { a: 1, b: 2, c: 3 }
+  // _.emit() replacement
+  const { a, ...noA } = copy; // noA => { b: 2, c: 3 }
+  ```
+  
+- [4.5](#arrays--mapping) Use [Array.from](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from) instead of spread `...` for mapping over iterables, because it avoids creating an intermediate array.
+
+  ```javascript
+  // bad
+  const baz = [...foo].map(bar);
+
+  // good
+  const baz = Array.from(foo, bar);
+  ```
+## Useful methods
 ```js
 export const camelCaseToLabel = function (camelCase) {
   // Capitalize a sentence in camel case: 'helloWorld' => 'Hello world'
